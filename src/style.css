@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #10101c;
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 45px 20px;
+  background: linear-gradient(135deg, #25104a, #5c247e);
+}
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #ddd;
+  margin-bottom: 22px;
+}
+
+header input {
+  width: 90%;
+  max-width: 400px;
+  padding: 14px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+}
+
+main {
+  padding: 30px 6%;
+}
+
+main h2 {
+  margin-bottom: 25px;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 25px;
+}
+
+.movie-card {
+  background: #202033;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.movie-card:hover {
+  transform: translateY(-7px);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 15px;
+}
+
+.movie-info h3 {
+  margin-bottom: 9px;
+}
+
+.movie-info p {
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+.movie-info span {
+  color: #ffd166;
+}
+
+button {
+  background: #9b59b6;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.movie-info button {
+  display: block;
+  margin-top: 14px;
+  width: 100%;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: #000c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: #25253b;
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.modal-content img {
+  width: 120px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.modal-content h2,
+.modal-content p {
+  margin-bottom: 12px;
+}
+
+.close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #aaa;
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 27px;
+  }
+
+  main {
+    padding: 25px 15px;
+  }
+
+  .movie-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .movie-card img {
+    height: 210px;
+  }
+}
